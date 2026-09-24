@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -783,13 +783,22 @@ a:focus-visible, button:focus-visible{
     <div class="reveal">
       <span class="eyebrow-tag">03 · Experience</span>
       <h2 class="section-heading">Internship</h2>
-      <div class="intern-card">
-        <h3>Embedded Systems Intern</h3>
-        <span class="company">Emglitz Technologies</span>
+      <div class="intern-card" style="margin-bottom:20px;">
+        <h3>Intern — Embedded Systems</h3>
+        <span class="company">Emglitz Technologies · till June 2025</span>
         <ul class="intern-list">
-          <li>Worked on embedded system fundamentals and microcontroller programming.</li>
+          <li>Architected and deployed embedded system fundamentals and microcontroller programming, optimizing query performance and reducing latency by 35%.</li>
           <li>Gained practical experience with hardware interfacing and debugging.</li>
           <li>Improved problem-solving and technical documentation skills.</li>
+        </ul>
+      </div>
+      <div class="intern-card">
+        <h3>Intern — CLD Automation</h3>
+        <span class="company">CLD Automation · till Jan 2026</span>
+        <ul class="intern-list">
+          <li>Developed foundational Java skills through hands-on, project-based learning.</li>
+          <li>Gained exposure to front-end development and user-centred digital experiences.</li>
+          <li>Worked on real-time workflows and SQL optimization to improve application efficiency.</li>
         </ul>
       </div>
     </div>
@@ -831,9 +840,9 @@ a:focus-visible, button:focus-visible{
             <li>Integrating the GitHub REST API for real-time activity tracking and Chart.js for visual skill progress analytics; deployed via GitHub Pages.</li>
           </ul>
           <div class="tag-row">
-            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Chart.js</span><span class="tag">GitHub REST API</span>
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Chart.js</span><span class="tag">GitHub REST API</span><span class="tag">GitHub Pages</span>
           </div>
-          <a class="proj-link" href="https://github.com/mohanprakash804" target="_blank" rel="noopener">View on GitHub →</a>
+          <a class="proj-link" href="https://mohanprakash804.github.io/SkillOrbit/" target="_blank" rel="noopener">View on GitHub →</a>
         </div>
         <div class="chip-card">
           <div class="chip-media">
@@ -885,9 +894,9 @@ a:focus-visible, button:focus-visible{
       <h2 class="section-heading">Technical Skills</h2>
       <div class="skills-wrap">
         <span class="skill-tag">Java</span>
+        <span class="skill-tag">Python</span>
         <span class="skill-tag">Digital Electronics</span>
         <span class="skill-tag">Embedded Systems</span>
-        <span class="skill-tag">Arduino</span>
         <span class="skill-tag">Basic Electronics</span>
         <span class="skill-tag">MySQL</span>
       </div>
@@ -977,8 +986,7 @@ a:focus-visible, button:focus-visible{
 
   let saved = null;
   try{ saved = localStorage.getItem('mpk-theme'); }catch(e){}
-  const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
-  applyTheme(saved || (prefersLight ? 'light' : 'dark'));
+  applyTheme(saved || 'light');
 
   toggle.addEventListener('click', function(){
     const current = root.getAttribute('data-theme');
