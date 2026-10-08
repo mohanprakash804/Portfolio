@@ -568,6 +568,38 @@ section:nth-of-type(even){ background: var(--bg-alt); }
   transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease;
 }
 .soft-card:hover{ border-color: var(--blue); transform: translateY(-5px); box-shadow: 0 12px 26px var(--shadow); }
+
+/* Certifications */
+.cert-grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 820px;
+}
+@media (max-width: 760px){ .cert-grid{ grid-template-columns: 1fr; } }
+.cert-card{
+  display:flex;
+  align-items:center;
+  gap: 18px;
+  padding: 24px 26px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+.cert-card:hover{ border-color: var(--blue); transform: translateY(-5px); box-shadow: 0 12px 26px var(--shadow); }
+.cert-icon{
+  flex: 0 0 auto;
+  width: 46px; height: 46px;
+  border-radius: 12px;
+  background: var(--grad);
+  display:flex; align-items:center; justify-content:center;
+  color:#fff;
+}
+.cert-icon svg{ width:24px; height:24px; }
+.cert-card h3{ font-size: 1rem; font-weight:700; line-height:1.35; }
+.cert-card p{ margin: 4px 0 0; color: var(--text-muted); font-size: .86rem; font-weight:500; }
+
 .soft-card .icon{ width:30px; height:30px; margin:0 auto 12px; color: var(--blue-bright); }
 .soft-card span{ font-size: .9rem; font-weight:600; }
 
@@ -647,7 +679,7 @@ a:focus-visible, button:focus-visible{
   html{ scroll-behavior:auto; }
 }
 
-@media (max-width: 860px){
+@media (max-width: 1040px){
   .nav-links{
     position: fixed;
     top: 66px; left:0; right:0;
@@ -682,6 +714,7 @@ a:focus-visible, button:focus-visible{
       <li><a href="#projects" class="nav-link">Projects</a></li>
       <li><a href="#skills" class="nav-link">Skills</a></li>
       <li><a href="#softskills" class="nav-link">Soft Skills</a></li>
+      <li><a href="#certifications" class="nav-link">Certifications</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
     <div class="nav-right">
@@ -932,11 +965,37 @@ a:focus-visible, button:focus-visible{
   </div>
 </section>
 
+<!-- ============ CERTIFICATIONS ============ -->
+<section id="certifications">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow-tag">07 · Credentials</span>
+      <h2 class="section-heading">Certifications</h2>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></div>
+          <div>
+            <h3>SQL (Intermediate) Certificate</h3>
+            <p>HackerRank</p>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></div>
+          <div>
+            <h3>Java Programming Fundamentals</h3>
+            <p>Infosys Springboard</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CONTACT ============ -->
 <section id="contact">
   <div class="container" style="display:flex; justify-content:center;">
     <div class="contact-panel reveal">
-      <span class="eyebrow-tag">07 · Let's Connect</span>
+      <span class="eyebrow-tag">08 · Let's Connect</span>
       <h2>Exploring career opportunities</h2>
       <p>"Looking for opportunities in software development and embedded systems, to contribute and grow"</p>
       <a class="contact-cta" href="mailto:mohanprakash804@gmail.com">
